@@ -41,9 +41,11 @@ public class BackendController {
     public record AccountResponse(String accountId, String accountName, BigDecimal balance) {
     }
 
-    public record TransferRequest(String from, String to, String amount){}
+    public record TransferRequest(String from, String to, String amount) {
+    }
 
-    public record TransferResponse(String transferId) {}
+    public record TransferResponse(String transferId) {
+    }
 
 
     @GetMapping("users/{id}")
