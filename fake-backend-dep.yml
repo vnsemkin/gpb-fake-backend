@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fake-backend
+  labels:
+    app: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fake-backend
+  template:
+    metadata:
+      labels:
+        app: hero
+    spec:
+      containers:
+        - name: fake-backend
+          image: normat/fake-backend
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
