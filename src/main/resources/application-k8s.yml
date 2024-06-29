@@ -1,0 +1,3 @@
+spring:
+  application.name: gbp-backend
+  config.import: "optional:configserver:http://config-server:8099"

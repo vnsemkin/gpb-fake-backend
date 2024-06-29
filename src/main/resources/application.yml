@@ -1,2 +1,4 @@
-spring.application.name: gbp-backend
-server.port: 8080
+spring:
+  application.name: gbp-backend
+  config.import: "optional:configserver:http://localhost:8099"
+
